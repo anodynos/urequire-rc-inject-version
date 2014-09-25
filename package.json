@@ -1,0 +1,46 @@
+{
+  "name": "urequire-rc-inject-version",
+  "description": "uRequire ResourceConverter that injects a `var VERSION = 'x.x.x'` where its needed.",
+  "version": "0.1.0",
+  "homepage": "http://uRequire.org",
+  "author": {
+    "name": "Agelos Pikoulas",
+    "email": "agelos.pikoulas@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "keywords": [
+    "urequire",
+    "inject-version",
+    "javascript",
+    "resource",
+    "converter",
+    "commonjs",
+    "AMD",
+    "UMD",
+    "require",
+    "define",
+    "assets",
+    "workflow"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anodynos/urequire-rc-inject-version"
+  },
+  "bugs": {
+    "url": "http://github.com/anodynos/urequire-rc-inject-version/issues",
+    "email": "agelos.pikoulas@gmail.com"
+  },
+  "main": "./source/code/urequire-rc-inject-version.coffee",
+  "preferGlobal": false,
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "lodash": "*"
+  }
+}
