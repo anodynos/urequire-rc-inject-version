@@ -19,23 +19,35 @@ By default:
 
  * it reads the `version` of your project's `package.json`.
 
- * It adds it before the body of the 'main' module, if `bundle.main` is defined (otherwise to no modules).
+ * It adds it before the body of the 'main' module, if `bundle.main` is defined (otherwise it fails, unless `options.modules` is passed).
 
 To override these defaults use it as `['inject-version', options]` where options is a `{}` like this:
 
 ```
     [ 'inject-version', {
         VERSION: pkg.version + '-NIGHTLY',
-        modules: 'my/module/path'
+        modules: 'my/module/path/**/*'
        }
     ]
 ```
 
-The `modules` key holds either a `String` path of a module (without `.js`) or an `Array` of module paths ['my/module/path', 'my/other/modulePath'] (always relative to `bundle.path`).
+The `modules` can be a `String` or an `Array` of module paths (always relative to `bundle.path`, without `.js`) that filters module paths using [`is_file_in`](https://github.com/anodynos/is_file_in) which is minimatch on steroids.
 
-# See some more RC usage / configuring examples
+For example:
+
+```
+    [ 'inject-version', {
+        VERSION: pkg.version + '-NIGHTLY',
+        modules: ['models/**/*', '!models/aliens/**/*', /integration/]
+       }
+    ]
+```
+
+### See more ResourceConverter usage / configuring examples
 
 http://github.com/anodynos/urequire-rc-less/
+
+http://urequire.org
 
 # License
 
