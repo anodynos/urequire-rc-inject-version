@@ -2,8 +2,6 @@ fs = require 'fs'
 _ = require 'lodash'
 umatch = require 'umatch'
 
-VERSION = (JSON.parse fs.readFileSync process.cwd() + '/package.json').version
-
 module.exports = [
  '+inject-version'
 
@@ -21,6 +19,7 @@ module.exports = [
         throw err
 
     if umatch(m.path, @options.modules) or (m is m.bundle.mainModule)
+      VERSION = (JSON.parse fs.readFileSync process.cwd() + '/package.json').version
       m.beforeBody =
         ( if m.beforeBody then m.beforeBody + '\n' else '') +
         "var VERSION = '#{@options.VERSION or VERSION}'; // injected by urequire-rc-inject-version"
