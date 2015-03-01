@@ -1,7 +1,7 @@
 {
   "name": "urequire-rc-inject-version",
   "description": "uRequire ResourceConverter that injects a `var VERSION = 'x.x.x'` where its needed.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "http://uRequire.org",
   "author": {
     "name": "Agelos Pikoulas",
@@ -41,7 +41,7 @@
     "node": "0.10.x"
   },
   "peerDependencies": {
-    "urequire": "~0.7.0"
+    "urequire": "~0.7.0-beta.14"
   },  
   "dependencies": {
     "lodash": "2.4.x",
