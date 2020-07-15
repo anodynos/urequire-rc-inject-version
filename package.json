@@ -39,7 +39,7 @@
     "urequire": "~0.7.0-beta.21"
   },  
   "dependencies": {
-    "lodash": "2.4.x",
+    "lodash": "4.17.x",
     "umatch": "0.2.x"
   }
 }
